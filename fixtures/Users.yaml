@@ -1,0 +1,14 @@
+App\Entity\Users:
+    user (template):
+        password: '<password()>'
+        email: '<email()>'
+        avatar_id: '@avatar*'
+
+
+    users{0..9} (extends user): ~
+
+    admin (extends user):
+        email: 'micfild@heloise.com'
+        password: 'hebaist'
+        roles: ['ROLE_ADMIN']
+

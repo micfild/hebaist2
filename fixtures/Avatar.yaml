@@ -1,0 +1,3 @@
+App\Entity\Avatar:
+    avatars{0..4}:
+        link: '<imageUrl(70 ,70)>'
