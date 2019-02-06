@@ -37,4 +37,9 @@ class Avatar
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->link;
+    }
 }

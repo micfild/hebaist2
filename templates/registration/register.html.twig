@@ -9,6 +9,22 @@
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.password.first) }}
         {{ form_row(registrationForm.password.second) }}
+<table class="table">
+    <tbody>
+    <tr>
+        <th>Choisir votre avatar</th>
+
+
+        {% for elem in registrationForm.avatarId %}
+        <td>{{ form_widget(elem) }} </td>
+        <td><img src="{{ elem.vars.label }}"></td>
+        {% endfor %}
+    </tr>
+    </tbody>
+</table>
+
+
+
 
     {{ form_end(registrationForm) }}
 {% endblock %}

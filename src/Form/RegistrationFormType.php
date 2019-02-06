@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Users;
+use App\Entity\Avatar;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -30,6 +32,11 @@ class RegistrationFormType extends AbstractType
             ->add('termsAccepted', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => new IsTrue(),
+            ])
+            ->add('avatarId', EntityType::class, [
+                'expanded'=>true,
+                'class' => Avatar::class,
+                'label' => 'avatar',
             ])
 
         ;
