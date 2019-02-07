@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
-    {% block stylesheets %}{% endblock %}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/bootstrap.css') }}">
+    {% endblock %}
+
 </head>
 <body>
-<div id="background">
-    l
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+
 
     {% block body %}{% endblock %}
 </div>
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('build/app.js') }}"></script>
+{% endblock %}
 
 </body>
 </html>
