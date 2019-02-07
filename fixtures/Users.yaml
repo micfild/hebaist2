@@ -9,6 +9,6 @@ App\Entity\Users:
 
     admin (extends user):
         email: 'micfild@heloise.com'
-        password: 'hebaist'
-        roles: ['ROLE_ADMIN']
+        password: '\$2y\$13\$sNtG0rjYLAXf2WDa3Zz4QetjT/L1rkygXXT9YFhB169Wrctax7SM.'
+        roles: '[ROLE_ADMIN]'
 

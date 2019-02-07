@@ -1,3 +1,17 @@
 App\Entity\Avatar:
-    avatars{0..4}:
-        link: '<imageUrl(70 ,70)>'
+    avatar (template):
+
+    avatar1 (extends avatar):
+        link: '../assets/img/avatar1.png'
+
+    avatar2 (extends avatar):
+        link: '../assets/img/avatar2.png'
+
+    avatar3 (extends avatar):
+        link: '../assets/img/avatar3.png'
+
+    avatar4 (extends avatar):
+        link: '../assets/img/avatar4.png'
+
+    avatar5 (extends avatar):
+        link: '../assets/img/avatar5.png'
