@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Register</h1>
-    {{ dump(registrationForm.avatarId) }}
+    {% dump(registrationForm.avatarId) %}
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.password.first) }}
