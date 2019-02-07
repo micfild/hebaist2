@@ -4,24 +4,30 @@
 
 {% block body %}
     <h1>Register</h1>
-
+    {{ dump(registrationForm.avatarId) }}
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.password.first) }}
         {{ form_row(registrationForm.password.second) }}
-<table class="table">
-    <tbody>
-    <tr>
-        <th>Choisir votre avatar</th>
 
+    <table class="table">
+        <tbody>
+        <tr>
 
-        {% for elem in registrationForm.avatarId %}
-        <td>{{ form_widget(elem) }} </td>
-        <td><img src="{{ elem.vars.label }}"></td>
-        {% endfor %}
-    </tr>
-    </tbody>
-</table>
+            {% for elem in registrationForm.avatarId %}
+                <th>
+                    <label for="{{ elem.vars.id }}">
+                        <img src="{{ elem.vars.label }}">
+                    </label>
+                </th>
+                <td>
+                    {{ form_widget(elem) }}
+                </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+
 
     <button class="btn">Register</button>
 
