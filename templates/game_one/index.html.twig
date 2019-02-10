@@ -9,10 +9,12 @@
 
 
     <div id="backgound">
+
         <img alt="background" id="bkimg" src="{{ asset('assets/img/background_img.jpg')}}" />
         <img alt="bloc notes" id="bloc" src="{{ asset('assets/img/bloc_jeu.png')}}" />
 
         <img alt="logo" id="logo" src="{{ asset('assets/img/logo.png')}}" />
+
 
 
         <a href="{{ path('app_login') }}"> <button type="button" class="bt-accueil" id="quitter">
@@ -21,6 +23,8 @@
         <button type="button" class="bt-accueil" id="pause">
             <img alt="quitter" class="color-bt" src="{{ asset('assets/img/pause.svg')}}" />
         </button>
+
+
 
 
 
@@ -38,6 +42,12 @@
 
 
     </div>
+
+
+        <div id="container-avatar">
+            <img src="{{ asset('assets/img/avatar1.png')}}" id="avatar">
+            <p id="name-player">Joueur</p>
+        </div>
 
         <!-- /Allumettes -->
 
