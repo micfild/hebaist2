@@ -1,0 +1,256 @@
+@font-face {
+	font-family: 'olivetti';
+	src: url('../fonts/olivetti.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sansation';
+	src: url('../fonts/sansation_regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'sansation-bold';
+	src: url('../fonts/sansation_bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body {
+	height: 100vh;
+	background: radial-gradient(white, grey, black 80%);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#backgound {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 1200px;
+	height: 675px;
+	box-shadow: 0 0 5px 2px #282a2d;
+	line-height: 1.4;
+}
+
+#bkimg {
+	position: relative;
+	z-index: 1;
+	width: 1200px;
+	height: auto;
+	border-radius: 20px;
+}
+
+#bloc {
+	position: absolute;
+	z-index: 1;
+	width: 940px;
+	height: auto;
+	top: 25px;
+	left: 240px;
+}
+
+
+
+#logo {
+	position: absolute;
+	z-index: 3;
+	width: 300px;
+	height: auto;
+	top: -20px;
+	left: -60px;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+
+
+#quitter {
+	position: absolute;
+	z-index: 2;
+	height: 85px;
+	width: 85px;
+	bottom: 30px;
+	left: 20px;
+}
+
+#pause {
+	position: absolute;
+	z-index: 2;
+	height: 85px;
+	width: 85px;
+	bottom: 30px;
+	left: 120px;
+}
+
+#valide {
+	position: absolute;
+	z-index: 2;
+	height: 60px;
+	width: 60px;
+	bottom: 40px;
+	right: 80px;
+}
+
+
+
+
+
+.bt-accueil {
+	transition: 0.1s;
+
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 170px;
+
+	background: linear-gradient(-45deg, rgba(48, 43, 43, 0.4), rgba(222, 208, 186, 0.8));
+
+	box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0 -5px 10px rgba(0, 0, 0, 0.75),
+		0 0 15px rgba(0, 0, 0, 0.5),
+		0 0 1px 3px rgba(0, 0, 0, 0.2),
+		0 4px 5px rgba(255, 255, 255, 0.1),
+
+		inset 0 2px 3px #555,
+		inset 0 4px 8px #000,
+		inset 0 0 3px #000,
+
+		inset 0 -20px 15px rgba(255, 255, 255, 0.05);
+
+}
+
+.bt-accueil:hover {
+	cursor: pointer;
+	transition: 0.1s;
+	outline: 0;
+
+	height: 65px;
+	padding-top: 5px;
+
+	background: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(198, 199, 199, 0.3));
+
+	box-shadow:
+		0 5px 10px rgba(0, 0, 0, 0.75),
+		0 0 15px rgba(0, 0, 0, 1),
+		0 0 1px 3px rgba(0, 0, 0, 0.5),
+		0 -4px 5px rgba(255, 255, 255, 0.5),
+		inset 0 -2px 3px #555,
+		inset 0 -4px 5px #000,
+		inset 0 0 3px #000,
+		inset 0 20px 15px rgba(255, 255, 255, 0.05);
+}
+
+.bt-valide {
+	color: rgba(57, 91, 18, 1);
+	font-size: 30px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 170px;
+
+	transition: 0.1s;
+	outline: 0;
+
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.7), rgba(198, 199, 199, 0.3));
+
+	box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0 -5px 10px rgba(0, 0, 0, 0.75),
+		0 0 15px rgba(0, 0, 0, 0.5),
+		0 0 1px 3px rgba(0, 0, 0, 0.2),
+		0 -5px 15px rgba(57, 91, 18, 0.1),
+
+		inset 0 2px 3px #555,
+		inset 0 4px 8px #000,
+		inset 0 0 3px #000,
+
+		inset 0 40px 40px rgba(255, 255, 255, 0.05);
+
+}
+
+
+.bt-valide:hover {
+	cursor: pointer;
+	color: #E2E1BD;
+	font-size: 35px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 170px;
+
+	height: 70px;
+	padding-top: 2px;
+
+	background: linear-gradient(-90deg, rgba(68, 158, 23, 0.8), rgba(125, 176, 37, 0.6));
+
+	box-shadow:
+		0 5px 10px rgba(0, 0, 0, 0.75),
+		0 0 15px rgba(0, 0, 0, 1),
+		0 0 1px 3px rgba(0, 0, 0, 0.5),
+		0 -4px 5px rgba(255, 255, 255, 0.5),
+		inset 0 -2px 3px #555,
+		inset 0 -4px 5px #000,
+		inset 0 0 3px #000,
+		inset 0 20px 15px rgba(255, 255, 255, 0.05);
+
+}
+
+
+/*===============JEU=============================*/
+
+
+
+
+#paper-background{
+	z-index:9;
+	position:absolute;
+	background-color: black;
+	width: 790px;
+	height: 550px;
+	bottom: 60px;
+	left: 340px;
+	border-radius: 2%;
+	box-shadow: 10px 5px 5px black;
+
+}
+#canvas-size{
+
+	position: absolute;
+	bottom: 450px;
+	left: 230px;
+}
+
+
+#container-memory{
+	z-index:9;
+	width: 700px;
+	position: absolute;
+	bottom: 150px;
+	left: 400px;
+}
+
+
+.consigne-text {
+	position: absolute;
+	z-index: 10;
+	bottom: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	width:790px;
+
+	font-family: 'sansation';
+	color: white;
+	font-size: 16pt;
+	text-align: center;
+	line-height: 20pt;
+}
+
+
+
+

@@ -1,20 +1,66 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
-{% block title %}Hello GameOneController!{% endblock %}
+{% block head %}
+    <link href="{{ asset('assets/css/allumettes_style.css')}}" rel="stylesheet">
+{% endblock %}
+{% block title %}Jeu des allumettes{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/micfi/Documents/GitHub/symfony/hebaist2/src/Controller/GameOneController.php'|file_link(0) }}">src/Controller/GameOneController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/micfi/Documents/GitHub/symfony/hebaist2/templates/game_one/index.html.twig'|file_link(0) }}">templates/game_one/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div id="backgound">
+        <img alt="background" id="bkimg" src="{{ asset('assets/img/background_img.jpg')}}" />
+        <img alt="bloc notes" id="bloc" src="{{ asset('assets/img/bloc_jeu.png')}}" />
+
+        <img alt="logo" id="logo" src="{{ asset('assets/img/logo.png')}}" />
+
+
+        <a href="{{ path('app_login') }}"> <button type="button" class="bt-accueil" id="quitter">
+            <img alt="pause" class="color-bt" src="{{ asset('assets/img/quitter.svg')}}" />
+        </button></a>
+        <button type="button" class="bt-accueil" id="pause">
+            <img alt="quitter" class="color-bt" src="{{ asset('assets/img/pause.svg')}}" />
+        </button>
+
+
+
+        <!--		///////////////////////////////////////////////////-->
+
+
+
+        <div id="allumettes-background">
+            <p class="consigne-text">Sélectionne 1, 2 ou 3 allumettes pour découvrir le message écrit sur la tombe. <br />Tu devras prendre la dernière pour gagner et décoder le message en premier.</p>
+            <img src="{{ asset('assets/img/tombe.jpg')}}" />
+        </div>
+
+
+        <div id="container-allumettes">
+
+
+    </div>
+
+        <!-- /Allumettes -->
+
+        <button type="button" id="btOne" class="round" >1
+        </button>
+        <!-- /Button One (Allumettes) -->
+
+        <button type="button" id="btTwo" class="round" >2
+        </button>
+        <!-- /Button One (Allumettes) -->
+
+        <button type="button" id="btThree" class="round">3
+        </button>
+        <!-- /Button One (Allumettes) -->
+    </div>
+
+
+
+
+
+
+
+    <script src="{{ asset('assets/script/allumettes_script.js') }}"></script>
+
+
 {% endblock %}
