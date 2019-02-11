@@ -2,5 +2,9 @@ login:
     form:
         btn:
             label: "Sign in"
+            register: "Subcribe"
         title:
             label: "Please log in"
+
+btn:
+    logout: "Log out"

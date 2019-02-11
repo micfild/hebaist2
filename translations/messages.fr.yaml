@@ -2,6 +2,9 @@ login:
     form:
         btn:
             label: "S'autentifier"
+            register: "S'inscrire"
         title:
             label: "Identifiez vous"
 
+btn:
+    logout: "Se déconnecter"

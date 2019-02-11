@@ -14,6 +14,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12" id="top-rw">
+            {% if app.user %}
+                <a class="btn btn-lg btn-secondary" href="{{ path('app_logout') }}" role="button">{{ 'btn.logout'|trans }}</a>
+            {% endif %}
         </div>
     </div>
     <div class="row">
