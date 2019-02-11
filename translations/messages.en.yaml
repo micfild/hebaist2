@@ -1,0 +1,6 @@
+login:
+    form:
+        btn:
+            label: "Sign in"
+        title:
+            label: "Please log in"

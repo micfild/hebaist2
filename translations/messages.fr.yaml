@@ -1,0 +1,7 @@
+login:
+    form:
+        btn:
+            label: "S'autentifier"
+        title:
+            label: "Identifiez vous"
+
