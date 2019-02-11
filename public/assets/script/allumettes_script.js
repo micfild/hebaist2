@@ -50,8 +50,8 @@ function jouer() {
             // score = ((jeu.tour == "robot") ? "100" : "0");
             // go(score);
             // return 0;
+            setTimeout("location.href =  '/fr/game/two'", 2000);
 
-            location.href =  '/fr/game/two';
         }
 
         if (jeu.tour == "joueur") {
