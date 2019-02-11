@@ -9,41 +9,22 @@
         <div class="col-6">
 
             <h1>Register</h1>
-            {% dump(registrationForm.avatarId) %}
+
             {{ form_start(registrationForm) }}
             {{ form_row(registrationForm.email) }}
             {{ form_row(registrationForm.password.first) }}
             {{ form_row(registrationForm.password.second) }}
 
-            {#<table class="table">#}
-            {#<tbody>#}
-            {#<tr>#}
-
-            {#{% for elem in registrationForm.avatarId %}#}
-            {#<th>#}
-            {#<label for="{{ elem.vars.id }}">#}
-            {#<img src="{{ elem.vars.label }}" class="avatar">#}
-            {#</label>#}
-            {#</th>#}
-            {#<td>#}
-            {#{{ form_widget(elem) }}#}
-            {#</td>#}
-            {#{% endfor %}#}
-            {#</tr>#}
-            {#</tbody>#}
-            {#</table>#}
-
             {% for elem in registrationForm.avatarId %}
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label for="{{ elem.vars.id }}" class="btn btn-secondary">
-                        {#<input type="radio" checked autocomplete="off" name="registration_form[{{ elem.vars.id }}]">#}
-                        {{ form_widget(elem) }}<img src="{{ elem.vars.label }}" class="avatar">
+                        {{ form_widget(elem, {'attr':{'autocomplete':'off'} }) }}<img src="{{ elem.vars.label }}" class="avatar">
                     </label>
                 </div>
             {% endfor %}
 
-
-            <button class="btn">Register</button>
+            {{ form_row(registrationForm.termsAccepted) }}
+            <button class="btn btn-secondary">Register</button>
 
 
             {{ form_end(registrationForm) }}
