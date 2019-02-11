@@ -3,6 +3,7 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+    <div id="backgroundReg">
     <h1>Register</h1>
     {% dump(registrationForm.avatarId) %}
     {{ form_start(registrationForm) }}
@@ -33,6 +34,7 @@
 
 
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}
 
 
