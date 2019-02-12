@@ -16,6 +16,7 @@ class GameOneController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
+
         return $this->render('game_one/index.html.twig', [
             'controller_name' => 'GameOneController',
         ]);

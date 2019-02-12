@@ -6,7 +6,7 @@
 {% block title %}Jeu des allumettes{% endblock %}
 
 {% block body %}
-
+{% dump  %}
 
     <div id="backgound">
 
@@ -46,7 +46,7 @@
 
         <div id="container-avatar">
             <img src="{{ '../' ~ app.user.avatarid.link }}" id="avatar">
-            <p id="name-player">{{ app.user.email }}</p>
+            <p id="name-player">{{ app.user.getUsermail }}</p>
         </div>
 
         <!-- /Allumettes -->

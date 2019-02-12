@@ -130,4 +130,11 @@ class Users implements UserInterface
 
         return $this;
     }
+
+    public function getUsermail()
+    {
+        $usrmail = explode('@', $this->email);
+
+        return $usrmail[0];
+    }
 }
