@@ -3,18 +3,14 @@
 {% block title %}Hello LoggedController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/micfi/Documents/GitHub/symfony/hebaist2/src/Controller/LoggedController.php'|file_link(0) }}">src/Controller/LoggedController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/micfi/Documents/GitHub/symfony/hebaist2/templates/logged/index.html.twig'|file_link(0) }}">templates/logged/index.html.twig</a></code></li>
-    </ul>
-</div>
+{%  dump %}
+    <div class="col-4" id="lft-col">
+        <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar_log">
+        <p id="logged-usr">{{ app.user.getUsermail }}</p>
+    </div>
+    <div class="col-5" id="form-ctr">
+    </div>
+    <div class="col-3">
+    </div>
 {% endblock %}

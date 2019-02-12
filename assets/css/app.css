@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'olivetti';
+    src: url('../fonts/olivetti.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     height: 100vh;
     background: radial-gradient(white, grey, black 80%);
@@ -38,6 +45,19 @@ body{
 .avatar {
     height:80px;
     width: 80px;
+}
+
+#avatar_log {
+    margin-top: 83%;
+    margin-left: 14.5%;
+    height: 130px;
+    width: 130px;
+}
+
+#logged-usr{
+    font-family: 'olivetti';
+
+    margin-left: 14.5%;
 }
 
 #top-rw{
