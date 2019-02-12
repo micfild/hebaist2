@@ -45,8 +45,8 @@
 
 
         <div id="container-avatar">
-            <img src="{{ asset('assets/img/avatar1.png')}}" id="avatar">
-            <p id="name-player">Joueur</p>
+            <img src="{{ '../' ~ app.user.avatarid.link }}" id="avatar">
+            <p id="name-player">{{ app.user.email }}</p>
         </div>
 
         <!-- /Allumettes -->

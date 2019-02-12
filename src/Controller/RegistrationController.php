@@ -20,8 +20,8 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginAuthenticator $authenticator): Response
     {
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-            return $this->redirectToRoute('logged');
-        }
+        return $this->redirectToRoute('logged');
+    }
 
         $user = new Users();
         $form = $this->createForm(RegistrationFormType::class, $user);

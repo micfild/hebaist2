@@ -23,6 +23,8 @@ Encore
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
     .addStyleEntry('bootstrap', './assets/css/bootstrap.css')
+    .addStyleEntry('allumettes', './assets/css/allumettes_style.css')
+
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
