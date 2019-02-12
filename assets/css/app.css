@@ -56,8 +56,13 @@ body{
 
 #logged-usr{
     font-family: 'olivetti';
+    font-size: 15pt;
+    margin-top: 1%;
+    margin-left: 1%;
+}
 
-    margin-left: 14.5%;
+#div-usr-logged{
+
 }
 
 #top-rw{

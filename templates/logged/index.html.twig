@@ -6,8 +6,10 @@
 
 {%  dump %}
     <div class="col-4" id="lft-col">
-        <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar_log">
-        <p id="logged-usr">{{ app.user.getUsermail }}</p>
+        <div id="div-usr-logged">
+            <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar_log">
+            <p id="logged-usr">{{ app.user.getUsermail }}</p>
+        </div>
     </div>
     <div class="col-5" id="form-ctr">
     </div>
