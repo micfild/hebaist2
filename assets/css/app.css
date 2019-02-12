@@ -48,8 +48,6 @@ body{
 }
 
 #avatar_log {
-    margin-top: 83%;
-    margin-left: 14.5%;
     height: 130px;
     width: 130px;
 }
@@ -57,12 +55,14 @@ body{
 #logged-usr{
     font-family: 'olivetti';
     font-size: 15pt;
-    margin-top: 1%;
-    margin-left: 1%;
+    font-weight: bold;
+    text-align: center;
 }
 
 #div-usr-logged{
-
+    margin-top: 83.5%;
+    margin-left: 14.5%;
+    width: 130px;
 }
 
 #top-rw{

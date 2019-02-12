@@ -8,10 +8,11 @@
     <div class="col-4" id="lft-col">
         <div id="div-usr-logged">
             <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar_log">
-            <p id="logged-usr">{{ app.user.getUsermail }}</p>
+            <p id="logged-usr">{{ app.user.getUsermail|capitalize }}</p>
         </div>
     </div>
     <div class="col-5" id="form-ctr">
+        <p>Mon mail : {{ app.user.getEmail }}</p>
     </div>
     <div class="col-3">
     </div>
