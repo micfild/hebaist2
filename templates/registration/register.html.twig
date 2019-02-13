@@ -15,13 +15,15 @@
             {{ form_row(registrationForm.password.first) }}
             {{ form_row(registrationForm.password.second) }}
 
-            {% for elem in registrationForm.avatarId %}
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <p>Choisi un avatar</p>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                {% for elem in registrationForm.avatarId %}
                     <label for="{{ elem.vars.id }}" class="btn btn-secondary">
-                        {{ form_widget(elem, {'attr':{'autocomplete':'off'} }) }}<img src="{{ asset( elem.vars.label ) }}" class="avatar">
+                        {{ form_widget(elem) }}<img src="{{ asset( elem.vars.label ) }}" class="avatar">
                     </label>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
+
 
             {{ form_row(registrationForm.termsAccepted) }}
             <button class="btn btn-secondary">Register</button>
