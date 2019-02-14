@@ -7,7 +7,11 @@ use App\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage;
+
 
 class LoggedController extends AbstractController
 {
@@ -25,11 +29,12 @@ class LoggedController extends AbstractController
     /**
      * @Route("/logged/{id}", name="user_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Users $user): Response
+    public function delete(Request $request, Users $user, Session $session, TokenStorageInterface $tokenStorage)
     {
         if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
 
-            $service->logout();
+            $tokenStorage->setToken(null);
+            $session->invalidate();
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($user);

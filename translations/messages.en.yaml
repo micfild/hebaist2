@@ -8,3 +8,7 @@ login:
 
 btn:
     logout: "Log out"
+
+logged:
+    danger:
+        label: "Delete account"

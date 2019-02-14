@@ -12,8 +12,25 @@
         </div>
     </div>
     <div class="col-5" id="form-ctr">
-        <p>Mon mail : {{ app.user.getEmail }}</p>
-        {{ include('logged/_delete_form.html.twig') }}
+        <div class="row">
+            <div class="col-md-12 mb-lg-5">
+                <p>Mon mail : {{ app.user.getEmail }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 my-lg-5">
+                btn play
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 py-3">
+
+            </div>
+            <div class="col-md-4 py-3 text-center">
+                    {{ include('logged/_delete_form.html.twig') }}
+            </div>
+        </div>
+
     </div>
     <div class="col-3">
     </div>

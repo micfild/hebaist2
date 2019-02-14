@@ -47,14 +47,11 @@ function jeuxMemory(){
         oImg.style.position = 'absolute';
         oImg.style.zIndex = '20';
 
-
         //enregistre la fonction
         // (affichage du coté face de la carte)
         var x =  this.listenerDrawFaceUp.bind(this);
         this.click_listener = x;
         oImg.addEventListener('click', x, false);
-
-
     };
 
 

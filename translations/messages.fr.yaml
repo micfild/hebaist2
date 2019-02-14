@@ -8,3 +8,7 @@ login:
 
 btn:
     logout: "Se déconnecter"
+
+logged:
+    danger:
+        label: "Supprimer mon compte"
