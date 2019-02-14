@@ -1,5 +1,27 @@
 <form method="post" action="{{ path('user_delete', {'id': app.token.user.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ app.token.user.id) }}">
-    <button class="btn btn-outline-danger">{{ 'logged.danger.label'|trans }}</button>
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">
+        {{ 'logged.danger.label'|trans }}
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="DeleteModalLabel">Suppression du compte Hébaist</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-outline-danger">{{ 'logged.danger.label'|trans }}</button>
+                </div>
+                <div class="modal-footer">
+                    <p>Attention cette action est irreversible</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
