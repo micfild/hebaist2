@@ -21,3 +21,16 @@ logged:
             label: "Supprimer mon compte"
         footer:
             label: "Attention, cette action est irreversible"
+
+register:
+    form:
+        title:
+            label: "Formulaire d'inscription"
+        email:
+            label: "Saisir votre email"
+        password:
+            label: "Choisir un mot de passe"
+        repeatpassword:
+            label: "Vérification du mot de passe"
+        avatar:
+            label: "Choisissez votre avatar"

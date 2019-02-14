@@ -21,3 +21,16 @@ logged:
             label: "Delete account"
         footer:
             label: "Be careful, this action is irreversible"
+
+register:
+    form:
+        title:
+            label: "Register"
+        email:
+            label: "Enter your email"
+        password:
+            label: "Choose a password"
+        repeatpassword:
+            label: "Verify the password"
+        avatar:
+            label: "Choose your avatar"

@@ -3,35 +3,55 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+    {% dump %}
     <div class="row" id="backgroundReg">
         <div class="col-3">
             <div style="position:relative">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="logo" id="logo">
             </div>
         </div>
-        <div class="col-6">
-
-            <h1>Register</h1>
-
+        <div class="col-6 mt-5">
+            <h1><p>{{ 'register.form.title.label'|trans }}</p></h1>
             {{ form_start(registrationForm) }}
-            {{ form_row(registrationForm.email) }}
-            {{ form_row(registrationForm.password.first) }}
-            {{ form_row(registrationForm.password.second) }}
-
-            <p>Choisi un avatar</p>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                {% for elem in registrationForm.avatarId %}
-                    <label for="{{ elem.vars.id }}" class="btn btn-secondary">
-                        {{ form_widget(elem) }}<img src="{{ asset( elem.vars.label ) }}" class="avatar">
-                    </label>
-                {% endfor %}
+            {#{{ form_row(registrationForm.email) }}#}
+            <div class="row">
+                <div class="col-12">
+                    <label for="{{ registrationForm.email.vars.id }}"><p>{{ 'register.form.email.label'|trans }}</p></label>
+                    {{ form_widget(registrationForm.email) }}
+                </div>
             </div>
-
-
-            {{ form_row(registrationForm.termsAccepted) }}
-            <button class="btn btn-secondary">Register</button>
-
-
+            <div class="row">
+                <div class="col-12">
+                    <label for="{{ registrationForm.password.first.vars.id }}"><p>{{ 'register.form.password.label'|trans }}</p></label>
+                    {{ form_widget(registrationForm.password.first) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="{{ registrationForm.password.second.vars.id }}"><p>{{ 'register.form.repeatpassword.label'|trans }}</p></label>
+                    {{ form_widget(registrationForm.password.second) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Choisi un avatar</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        {% for elem in registrationForm.avatarId %}
+                            <label for="{{ elem.vars.id }}" class="btn btn-secondary">
+                                {{ form_widget(elem) }}<img src="{{ asset( elem.vars.label ) }}" class="avatar">
+                            </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{ form_row(registrationForm.termsAccepted) }}
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-secondary">Register</button>
+                </div>
+            </div>
             {{ form_end(registrationForm) }}
         </div>
         <div class="col-3" id="lft-col">
