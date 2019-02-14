@@ -34,3 +34,5 @@ register:
             label: "Vérification du mot de passe"
         avatar:
             label: "Choisissez votre avatar"
+        termsaccepted:
+            label: "Conditions d'utilisation"

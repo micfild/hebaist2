@@ -34,3 +34,5 @@ register:
             label: "Verify the password"
         avatar:
             label: "Choose your avatar"
+        termsaccepted:
+            label: "Terms of use"

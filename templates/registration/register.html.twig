@@ -11,28 +11,26 @@
             </div>
         </div>
         <div class="col-6 mt-5">
-            <h1><p>{{ 'register.form.title.label'|trans }}</p></h1>
+            <div class="row mt-3 py-2"><h1><p>{{ 'register.form.title.label'|trans }}</p></h1></div>
             {{ form_start(registrationForm) }}
-            {#{{ form_row(registrationForm.email) }}#}
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-12">
                     <label for="{{ registrationForm.email.vars.id }}"><p>{{ 'register.form.email.label'|trans }}</p></label>
                     {{ form_widget(registrationForm.email) }}
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
+            <div class="row my-3">
+                <div class="col-6">
                     <label for="{{ registrationForm.password.first.vars.id }}"><p>{{ 'register.form.password.label'|trans }}</p></label>
                     {{ form_widget(registrationForm.password.first) }}
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
+                <div class="col-6">
                     <label for="{{ registrationForm.password.second.vars.id }}"><p>{{ 'register.form.repeatpassword.label'|trans }}</p></label>
                     {{ form_widget(registrationForm.password.second) }}
                 </div>
+                {{ form_errors(registrationForm.password.first) }}
             </div>
-            <div class="row">
+            <div class="row my-5">
                 <div class="col-12">
                     <p>Choisi un avatar</p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -44,19 +42,44 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-6">
-                    {{ form_row(registrationForm.termsAccepted) }}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalScrollable">
+                        <label for="{{ registrationForm.termsAccepted.vars.id }}">{{ 'register.form.termsaccepted.label'|trans }}</label>
+                    </button>
+                    {{ form_widget(registrationForm.termsAccepted) }}
+
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <button class="btn btn-secondary">Register</button>
                 </div>
             </div>
             {{ form_end(registrationForm) }}
         </div>
-        <div class="col-3" id="lft-col">
+        <div class="col-3">
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam animi architecto aut consequuntur dolore ducimus eaque eius est exercitationem fugiat id illo impedit incidunt ipsam itaque minima nam nobis non officiis perferendis perspiciatis, quaerat quas quis quod ratione repellat repellendus sapiente tempore vero voluptatem voluptates voluptatibus? A ad amet aperiam aspernatur, cum cupiditate distinctio dolores eligendi facere illum, iste minima natus nihil nisi numquam possimus, praesentium provident quia ratione rerum temporibus veritatis voluptas! Consequatur dolor ea ex hic itaque labore obcaecati quas saepe, sapiente sequi? Aliquid architecto, consequuntur eius est expedita explicabo neque odio quasi quia rerum sapiente sint sit totam ullam unde veniam veritatis! A ab, accusamus ad aspernatur autem cumque cupiditate deserunt dicta dignissimos dolor dolore dolorum eos error esse eum ex excepturi expedita illum inventore iure iusto minima modi omnis placeat praesentium provident quasi qui quia quis similique sint tenetur ut velit? Accusantium deleniti id ratione tempore. Placeat quasi reprehenderit similique. Accusamus at corporis doloremque et ex expedita iure, laboriosam quas unde voluptates. A error et excepturi fuga laborum nam necessitatibus nihil quaerat sapiente veritatis! A assumenda consequuntur cumque dicta dolorum, ex expedita iusto, nam necessitatibus nesciunt odio optio perferendis quia repellendus sed unde velit.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
+
 
 

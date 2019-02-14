@@ -32,12 +32,10 @@ class RegistrationFormType extends AbstractType
             ->add('termsAccepted', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => new IsTrue(),
-                'label' => ''
             ])
             ->add('avatarId', EntityType::class, [
                 'expanded'=>true,
                 'class' => Avatar::class,
-                'label' => 'avatar',
             ])
 
         ;
