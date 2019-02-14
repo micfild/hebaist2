@@ -77,6 +77,59 @@ p{
     margin-top: 20%;
 }
 
+#quitter {
+    position: absolute;
+    z-index: 2;
+    height: 85px;
+    width: 85px;
+    bottom: 30px;
+    left: 20px;
+}
+
+.bt-accueil {
+    transition: 0.1s;
+
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 170px;
+
+    background: linear-gradient(-45deg, rgba(48, 43, 43, 0.4), rgba(222, 208, 186, 0.8));
+
+    box-shadow:
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+            0 -5px 10px rgba(0, 0, 0, 0.75),
+            0 0 15px rgba(0, 0, 0, 0.5),
+            0 0 1px 3px rgba(0, 0, 0, 0.2),
+            0 4px 5px rgba(255, 255, 255, 0.1),
+
+            inset 0 2px 3px #555,
+            inset 0 4px 8px #000,
+            inset 0 0 3px #000,
+
+            inset 0 -20px 15px rgba(255, 255, 255, 0.05);
+
+}
+
+.bt-accueil:hover {
+    cursor: pointer;
+    transition: 0.1s;
+    outline: 0;
+
+    height: 65px;
+    padding-top: 5px;
+
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(198, 199, 199, 0.3));
+
+    box-shadow:
+            0 5px 10px rgba(0, 0, 0, 0.75),
+            0 0 15px rgba(0, 0, 0, 1),
+            0 0 1px 3px rgba(0, 0, 0, 0.5),
+            0 -4px 5px rgba(255, 255, 255, 0.5),
+            inset 0 -2px 3px #555,
+            inset 0 -4px 5px #000,
+            inset 0 0 3px #000,
+            inset 0 20px 15px rgba(255, 255, 255, 0.05);
+}
+
 .btn {
     font-family: olivetti;
 }
