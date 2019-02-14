@@ -5,6 +5,10 @@ login:
             register: "S'inscrire"
         title:
             label: "Identifiez vous"
+        email:
+            label: "Votre email"
+        password:
+            label: "Votre mot de passe"
 
 btn:
     logout: "Se déconnecter"

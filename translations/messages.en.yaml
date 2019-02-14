@@ -5,6 +5,10 @@ login:
             register: "Subcribe"
         title:
             label: "Please log in"
+        email:
+            label: "Your email"
+        password:
+            label: "Your password"
 
 btn:
     logout: "Log out"

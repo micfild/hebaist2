@@ -6,6 +6,9 @@
 
 {%  dump %}
     <div class="col-4" id="lft-col">
+        <div style="position:relative">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="logo" id="logo">
+        </div>
         <div id="div-usr-logged">
             <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar_log">
             <p id="logged-usr">{{ app.user.getUsermail|capitalize }}</p>

@@ -86,6 +86,25 @@ p{
     left: 20px;
 }
 
+#logo {
+    position:absolute;
+    width: 300px;
+    height: auto;
+    z-index: 30;
+    top: -1px;
+    left: -50px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+input::placeholder{
+    font-family: olivetti;
+}
+
+/* bouton quitter */
 .bt-accueil {
     transition: 0.1s;
 
