@@ -80,3 +80,38 @@ p{
 .btn {
     font-family: olivetti;
 }
+/*bouton play*/
+svg#play {
+    width:120px;
+    cursor: pointer;
+    transform-origin: 50% 50%;
+}
+
+svg#play #triangle {
+    fill:rgba(22,22,22,0);
+    transition:500ms;
+    transform-origin: 50% 50%;
+}
+svg#play:hover #triangle {
+    fill:#A3CD3A;
+    transform-origin: 50% 50%;
+}
+
+svg #lineOne, svg #lineTwo {
+    transform-origin: 50% 50%;
+    transition: 1s;
+}
+
+svg:hover #lineOne {
+    transform: rotate(260deg);
+    -webkit-transform: rotate(260deg);
+    -moz-transform: rotate(260deg);
+    -o-transform: rotate(260deg);
+    transform-origin: 50% 50%;
+}
+
+svg:hover #lineTwo {
+    transform: rotate(-450deg);
+    transform-origin: 50% 50%;
+}
+/* ---------------------- */
