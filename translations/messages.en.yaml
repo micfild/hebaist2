@@ -10,5 +10,10 @@ btn:
     logout: "Log out"
 
 logged:
-    danger:
-        label: "Delete account"
+    modal:
+        title:
+            label: "Delete Hébaist account"
+        danger:
+            label: "Delete account"
+        footer:
+            label: "Be careful, this action is irreversible"

@@ -10,5 +10,10 @@ btn:
     logout: "Se déconnecter"
 
 logged:
-    danger:
-        label: "Supprimer mon compte"
+    modal:
+        title:
+            label: "Suppression du compte Hébaist"
+        danger:
+            label: "Supprimer mon compte"
+        footer:
+            label: "Attention, cette action est irreversible"

@@ -12,6 +12,10 @@ body{
     overflow: hidden;
 }
 
+p{
+    font-family: olivetti;
+}
+
 #background {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -71,4 +75,8 @@ body{
 
 #form-ctr{
     margin-top: 20%;
+}
+
+.btn {
+    font-family: olivetti;
 }

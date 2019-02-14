@@ -3,23 +3,23 @@
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ app.token.user.id) }}">
         <!-- Button trigger modal -->
     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">
-        {{ 'logged.danger.label'|trans }}
+        {{ 'logged.modal.danger.label'|trans }}
     </button>
     <!-- Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="DeleteModalLabel">Suppression du compte Hébaist</h5>
+                    <h5 class="modal-title" id="DeleteModalLabel"><p>{{ 'logged.modal.title.label'|trans }}</p></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <button class="btn btn-outline-danger">{{ 'logged.danger.label'|trans }}</button>
+                    <button class="btn btn-outline-danger">{{ 'logged.modal.danger.label'|trans }}</button>
                 </div>
                 <div class="modal-footer">
-                    <p>Attention cette action est irreversible</p>
+                    <p>{{ 'logged.modal.footer.label'|trans }}</p>
                 </div>
             </div>
         </div>
