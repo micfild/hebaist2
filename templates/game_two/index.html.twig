@@ -33,10 +33,12 @@
             <div id="canvas-size"></div>
         </div>
 
-        <div id="container-avatar">
-            <img src="{{ asset('assets/img/avatar1.png')}}" id="avatar">
-            <p id="name-player">Joueur</p>
-        </div>
+
+            <div id="container-avatar">
+                <img src="{{ asset( app.user.avatarid.link ) }}" id="avatar">
+                <p id="name-player">{{ app.user.getUsermail }}</p>
+            </div>
+
 
 </div>
 

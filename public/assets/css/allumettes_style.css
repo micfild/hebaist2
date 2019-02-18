@@ -376,9 +376,9 @@ body {
 #name-player {
 	position: absolute;
 	z-index: 20;
-	top: 95px;
+	top: 120px;
 	font-family: 'olivetti';
 	color: #3e3634;
-	font-size: 25pt;
+	font-size: 15pt;
 	left: 0px;
 }
